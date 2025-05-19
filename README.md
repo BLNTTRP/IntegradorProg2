@@ -1,4 +1,4 @@
-# Codificación UML ElBuenSabor - Programación 2 Rigoni
+# Proyecto Integrador ElBuenSabor - Programación 2 Rigoni
 
 Grupo:
 - Cosentino Joaquin
