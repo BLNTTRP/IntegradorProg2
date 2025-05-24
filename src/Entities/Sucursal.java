@@ -1,12 +1,14 @@
 package Entities;
 
 import java.time.LocalTime;
+import java.util.List;
 
 public class Sucursal extends Base {
     private String nombre;
     private LocalTime horarioApertura;
     private LocalTime horarioCierre;
     private Domicilio domicilio;
+    private List<Categoria> categorias;
 
     public Sucursal(String nombre, LocalTime horarioApertura, LocalTime horarioCierre) {
         this.nombre = nombre;
@@ -44,5 +46,13 @@ public class Sucursal extends Base {
 
     public void setDomicilio(Domicilio domicilio) {
         this.domicilio = domicilio;
+    }
+
+    public List<Categoria> getCategorias() {
+        return categorias;
+    }
+
+    public void setCategorias(List<Categoria> categorias) {
+        this.categorias = categorias;
     }
 }

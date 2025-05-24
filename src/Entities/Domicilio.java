@@ -5,6 +5,9 @@ public class Domicilio extends Base {
     private Integer numero;
     private Integer cp;
     private Localidad localidad;
+    private Provincia provincia;
+    private Pais pais;
+
 
     public Domicilio(String calle, Integer numero, Integer cp) {
         this.calle = calle;
@@ -43,4 +46,12 @@ public class Domicilio extends Base {
     public void setLocalidad(Localidad localidad) {
         this.localidad = localidad;
     }
+
+    public Provincia getProvincia() { return provincia;}
+
+    public void setProvincia(Provincia provincia) {this.provincia = provincia;}
+
+    public Pais getPais() {return pais;}
+
+    public void setPais(Pais pais) {this.pais = pais;}
 }
