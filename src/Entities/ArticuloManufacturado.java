@@ -2,14 +2,15 @@ package Entities;
 
 import java.util.List;
 
-public class ArticuloManufacturado extends Base {
+public class ArticuloManufacturado extends Articulo {
     private String descripcion;
     private String preparacion;
     private int tiempoEstimadoEnMinutos;
     private List<ArticuloManufacturadoDetalle> detalles;
 
 
-    public ArticuloManufacturado(String descripcion,String preparacion,int tiempoEstimadoEnMinutos  ) {
+    public ArticuloManufacturado(String denominacion, double precioVenta,String descripcion,String preparacion,int tiempoEstimadoEnMinutos  ) {
+        super(denominacion, precioVenta);
         this.preparacion = preparacion;
         this.descripcion = descripcion;
         this.tiempoEstimadoEnMinutos = tiempoEstimadoEnMinutos;

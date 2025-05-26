@@ -3,8 +3,8 @@ package Entities;
 public class Imagen extends Base {
     private String denominacion;
 
-    public Imagen (String denomination) {
-        this.denominacion = denomination;
+    public Imagen(String denominacion) {
+        this.denominacion = denominacion;
     }
 
     public String getDenominacion() {return denominacion;}

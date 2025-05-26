@@ -1,6 +1,7 @@
 package Entities;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Cliente extends Base {
     private String nombre;
@@ -8,6 +9,10 @@ public class Cliente extends Base {
     private String telefono;
     private String email;
     private LocalDate fechaNacimiento;
+    private Imagen imagen;
+    private Usuario usuario;
+    private List<Domicilio> domicilios;
+    private List<Pedido> pedidos;
 
     public Cliente(String nombre, String apellido, String telefono, String email, LocalDate fechaNacimiento) {
         this.nombre = nombre;
@@ -16,7 +21,6 @@ public class Cliente extends Base {
         this.email = email;
         this.fechaNacimiento = fechaNacimiento;
     }
-
 
     public String getNombre() {return nombre;}
 
@@ -37,4 +41,20 @@ public class Cliente extends Base {
     public LocalDate getFechaNacimiento() {return fechaNacimiento;}
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {this.fechaNacimiento = fechaNacimiento;}
+
+    public Imagen getImagen() {return imagen;}
+
+    public void setImagen(Imagen imagen) {this.imagen = imagen;}
+
+    public Usuario getUsuario() {return usuario;}
+
+    public void setUsuario(Usuario usuario) {this.usuario = usuario;}
+
+    public List<Domicilio> getDomicilios() {return domicilios;}
+
+    public void setDomicilios(List<Domicilio> domicilios) {this.domicilios = domicilios;}
+
+    public List<Pedido> getPedidos() {return pedidos;}
+
+    public void setPedidos(List<Pedido> pedidos) {this.pedidos = pedidos;}
 }

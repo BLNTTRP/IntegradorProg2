@@ -7,7 +7,7 @@ public class Empresa extends Base {
     private String nombre;
     private String razonSocial;
     private Integer cuit;
-    private final List<Sucursal> sucursales = new ArrayList<>();
+    private List<Sucursal> sucursales ;
 
     public Empresa(String nombre, String razonSocial, Integer cuit) {
         this.nombre = nombre;
@@ -39,11 +39,7 @@ public class Empresa extends Base {
         this.cuit = cuit;
     }
 
-    public List<Sucursal> getSucursales() {
-        return sucursales;
-    }
+    public List<Sucursal> getSucursales() {return sucursales;}
 
-    public void agregarSucursal(Sucursal sucursal) {
-        this.sucursales.add(sucursal);
-    }
+    public void setSucursales(List<Sucursal> sucursales) {this.sucursales = sucursales;}
 }

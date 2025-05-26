@@ -3,6 +3,7 @@ package Entities;
 public class DetallePedido extends Base{
     private int cantidad;
     private double subTotal;
+    private Articulo articulos;
 
     public DetallePedido(int cantidad, double subTotal) {
         this.cantidad = cantidad;
@@ -17,4 +18,7 @@ public class DetallePedido extends Base{
 
     public void setSubTotal(double subTotal) {this.subTotal = subTotal;}
 
+    public Articulo getArticulos() {return articulos;}
+
+    public void setArticulos(Articulo articulos) {this.articulos = articulos;}
 }

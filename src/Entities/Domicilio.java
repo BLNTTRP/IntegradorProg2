@@ -1,5 +1,7 @@
 package Entities;
 
+import java.util.List;
+
 public class Domicilio extends Base {
     private String calle;
     private Integer numero;
@@ -7,6 +9,7 @@ public class Domicilio extends Base {
     private Localidad localidad;
     private Provincia provincia;
     private Pais pais;
+    private List<Cliente> clientes;
 
 
     public Domicilio(String calle, Integer numero, Integer cp) {
@@ -54,4 +57,8 @@ public class Domicilio extends Base {
     public Pais getPais() {return pais;}
 
     public void setPais(Pais pais) {this.pais = pais;}
+
+    public List<Cliente> getClientes() {return clientes;}
+
+    public void setClientes(List<Cliente> clientes) {this.clientes = clientes;}
 }

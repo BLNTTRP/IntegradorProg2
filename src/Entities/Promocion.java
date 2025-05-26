@@ -2,6 +2,8 @@ package Entities;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
+
 import Enum.TipoPromocion;
 
 
@@ -14,7 +16,9 @@ public class Promocion extends Base {
     private String descripcionDescuento;
     private Double precioPromocional;
     private TipoPromocion tipoPromocion;
-
+    private List<Sucursal> sucursales;
+    private List<Imagen> imagenes;
+    private List<Articulo> articulos;
 
     public Promocion(String denominacion, LocalDate fechaDesde, LocalDate fechaHasta,
                      LocalTime horaDesde, LocalTime horaHasta, String descripcionDescuento,
@@ -61,5 +65,17 @@ public class Promocion extends Base {
     public TipoPromocion getTipoPromocion() {return tipoPromocion;}
 
     public void setTipoPromocion(TipoPromocion tipoPromocion) {this.tipoPromocion = tipoPromocion;}
+
+    public List<Sucursal> getSucursales() {return sucursales;}
+
+    public void setSucursales(List<Sucursal> sucursales) {this.sucursales = sucursales;}
+
+    public List<Imagen> getImagenes() {return imagenes;}
+
+    public void setImagenes(List<Imagen> imagenes) {this.imagenes = imagenes;}
+
+    public List<Articulo> getArticulos() {return articulos;}
+
+    public void setArticulos(List<Articulo> articulos) {this.articulos = articulos;}
 }
 
