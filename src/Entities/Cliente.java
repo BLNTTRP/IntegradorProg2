@@ -1,6 +1,7 @@
 package Entities;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente extends Base {
@@ -11,8 +12,8 @@ public class Cliente extends Base {
     private LocalDate fechaNacimiento;
     private Imagen imagen;
     private Usuario usuario;
-    private List<Domicilio> domicilios;
-    private List<Pedido> pedidos;
+    private Domicilio domicilios;
+    private List<Pedido> pedidos = new ArrayList<>();
 
     public Cliente(String nombre, String apellido, String telefono, String email, LocalDate fechaNacimiento) {
         this.nombre = nombre;
@@ -50,9 +51,9 @@ public class Cliente extends Base {
 
     public void setUsuario(Usuario usuario) {this.usuario = usuario;}
 
-    public List<Domicilio> getDomicilios() {return domicilios;}
+    public Domicilio getDomicilios() {return domicilios;}
 
-    public void setDomicilios(List<Domicilio> domicilios) {this.domicilios = domicilios;}
+    public void setDomicilios(Domicilio domicilios) {this.domicilios = domicilios;}
 
     public List<Pedido> getPedidos() {return pedidos;}
 

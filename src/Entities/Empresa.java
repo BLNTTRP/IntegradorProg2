@@ -7,7 +7,7 @@ public class Empresa extends Base {
     private String nombre;
     private String razonSocial;
     private Integer cuit;
-    private List<Sucursal> sucursales ;
+    private List<Sucursal> sucursales = new ArrayList<>();
 
     public Empresa(String nombre, String razonSocial, Integer cuit) {
         this.nombre = nombre;

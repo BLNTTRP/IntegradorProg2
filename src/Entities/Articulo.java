@@ -1,12 +1,13 @@
 package Entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Articulo extends Base{
     protected String denominacion;
     protected Double precioVenta;
-    private List<Promocion> promociones;
-    private List<Imagen> imagenes;
+    private List<Promocion> promociones = new ArrayList<>();
+    protected List<Imagen> imagenes = new ArrayList<>();
     private UnidadMedida unidadMedida;
     private Categoria categoria;
 

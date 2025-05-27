@@ -2,6 +2,8 @@ package Entities;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import Enum.TipoEnvio;
 import Enum.Estado;
@@ -16,6 +18,8 @@ public class Pedido extends Base {
     private FormaPago formaPago;
     private LocalDate fechaPedido;
     private Factura factura;
+    private List<DetallePedido> detallePedido = new ArrayList<>();
+    private Cliente cliente;
 
     public Pedido(LocalTime horaEstimadaFinalizacion, double total, double totalCosto, Estado estado, TipoEnvio tipoEnvio,
                   FormaPago formaPago, LocalDate fechaPedido) {
@@ -60,4 +64,11 @@ public class Pedido extends Base {
 
     public void setFactura(Factura factura) {this.factura = factura;}
 
+    public List<DetallePedido> getDetallePedido() {return detallePedido;}
+
+    public void setDetallePedido(List<DetallePedido> detallePedido) {this.detallePedido = detallePedido;}
+
+    public Cliente getCliente() {return cliente;}
+
+    public void setCliente(Cliente cliente) {this.cliente = cliente;}
 }

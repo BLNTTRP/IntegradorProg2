@@ -1,6 +1,7 @@
 package Entities;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Sucursal extends Base {
@@ -9,9 +10,7 @@ public class Sucursal extends Base {
     private LocalTime horarioCierre;
     private Domicilio domicilio;
     private Empresa empresa;
-    private List<Categoria> categorias;
-    private List<Pedido> pedidos;
-    private List<Promocion> promociones;
+    private List<Categoria> categorias = new ArrayList<>();
 
     public Sucursal(String nombre, LocalTime horarioApertura, LocalTime horarioCierre) {
         this.nombre = nombre;
@@ -51,19 +50,11 @@ public class Sucursal extends Base {
         this.domicilio = domicilio;
     }
 
-    public List<Categoria> getCategorias() {return categorias;}
-
-    public void setCategorias(List<Categoria> categorias) {this.categorias = categorias;}
-
-    public List<Pedido> getPedidos() {return pedidos;}
-
-    public void setPedidos(List<Pedido> pedidos) {this.pedidos = pedidos;}
-
-    public List<Promocion> getPromociones() {return promociones;}
-
-    public void setPromociones(List<Promocion> promociones) {this.promociones = promociones;}
-
     public Empresa getEmpresa() {return empresa;}
 
     public void setEmpresa(Empresa empresa) {this.empresa = empresa;}
+
+    public List<Categoria> getCategorias() {return categorias;}
+
+    public void setCategorias(List<Categoria> categorias) {this.categorias = categorias;}
 }

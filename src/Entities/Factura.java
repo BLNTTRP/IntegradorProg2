@@ -11,6 +11,7 @@ public class Factura extends Base{
     private String mpPaymentType;
     private FormaPago formaPago;
     private double totalVenta;
+    private Pedido pedido;
 
     public Factura(LocalDate fechaFacturacion, int mpPaymentId, int mpMerchantOrderId, String mpPreferenceId,
                    String mpPaymentType, FormaPago formaPago, double totalVenta, double totalVenta1,
@@ -51,4 +52,8 @@ public class Factura extends Base{
     public double getTotalVenta() {return totalVenta;}
 
     public void setTotalVenta(double totalVenta) {this.totalVenta = totalVenta;}
+
+    public Pedido getPedido() {return pedido;}
+
+    public void setPedido(Pedido pedido) {this.pedido = pedido;}
 }
