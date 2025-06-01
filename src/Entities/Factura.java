@@ -2,6 +2,15 @@ package Entities;
 
 import java.time.LocalDate;
 import Enum.FormaPago;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 
 public class Factura extends Base{
     private LocalDate fechaFacturacion;
@@ -11,49 +20,7 @@ public class Factura extends Base{
     private String mpPaymentType;
     private FormaPago formaPago;
     private double totalVenta;
+
     private Pedido pedido;
 
-    public Factura(LocalDate fechaFacturacion, int mpPaymentId, int mpMerchantOrderId, String mpPreferenceId,
-                   String mpPaymentType, FormaPago formaPago, double totalVenta, double totalVenta1,
-                   int mpPaymentId1, int mpMerchantOrderId1, String mpPreferenceId1, String mpPaymentType1, FormaPago formaPago1) {
-        this.fechaFacturacion = fechaFacturacion;
-        this.totalVenta = totalVenta;
-        this.mpPaymentId = mpPaymentId1;
-        this.mpMerchantOrderId = mpMerchantOrderId1;
-        this.mpPreferenceId = mpPreferenceId1;
-        this.mpPaymentType = mpPaymentType1;
-        this.formaPago = formaPago;
-    }
-
-    public LocalDate getFechaFacturacion() {return fechaFacturacion;}
-
-    public void setFechaFacturacion(LocalDate fechaFacturacion) {this.fechaFacturacion = fechaFacturacion;}
-
-    public int getMpPaymentId() {return mpPaymentId;}
-
-    public void setMpPaymentId(int mpPaymentId) {this.mpPaymentId = mpPaymentId;}
-
-    public int getMpMerchantOrderId() {return mpMerchantOrderId;}
-
-    public void setMpMerchantOrderId(int mpMerchantOrderId) {this.mpMerchantOrderId = mpMerchantOrderId;}
-
-    public String getMpPreferenceId() {return mpPreferenceId;}
-
-    public void setMpPreferenceId(String mpPreferenceId) {this.mpPreferenceId = mpPreferenceId;}
-
-    public String getMpPaymentType() {return mpPaymentType;}
-
-    public void setMpPaymentType(String mpPaymentType) {this.mpPaymentType = mpPaymentType;}
-
-    public FormaPago getFormaPago() {return formaPago;}
-
-    public void setFormaPago(FormaPago formaPago) {this.formaPago = formaPago;}
-
-    public double getTotalVenta() {return totalVenta;}
-
-    public void setTotalVenta(double totalVenta) {this.totalVenta = totalVenta;}
-
-    public Pedido getPedido() {return pedido;}
-
-    public void setPedido(Pedido pedido) {this.pedido = pedido;}
 }

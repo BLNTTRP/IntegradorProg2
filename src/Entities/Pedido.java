@@ -2,12 +2,22 @@ package Entities;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
-
+//import java.util.ArrayList;
+import java.util.HashSet;
+//import java.util.List;
+import java.util.Set;
 import Enum.TipoEnvio;
 import Enum.Estado;
 import Enum.FormaPago;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 
 public class Pedido extends Base {
     private Estado estado;
@@ -17,58 +27,8 @@ public class Pedido extends Base {
     private TipoEnvio tipoEnvio;
     private FormaPago formaPago;
     private LocalDate fechaPedido;
+
     private Factura factura;
-    private List<DetallePedido> detallePedido = new ArrayList<>();
-    private Cliente cliente;
+    private Set<DetallePedido> detallePedido = new HashSet<>();
 
-    public Pedido(LocalTime horaEstimadaFinalizacion, double total, double totalCosto, Estado estado, TipoEnvio tipoEnvio,
-                  FormaPago formaPago, LocalDate fechaPedido) {
-        this.horaEstimadaFinalizacion = horaEstimadaFinalizacion;
-        this.total = total;
-        this.totalCosto = totalCosto;
-        this.estado = estado;
-        this.tipoEnvio = tipoEnvio;
-        this.formaPago = formaPago;
-        this.fechaPedido = fechaPedido;
-    }
-
-    public LocalTime getHoraEstimadaFinalizacion() {return horaEstimadaFinalizacion;}
-
-    public void setHoraEstimadaFinalizacion(LocalTime horaEstimadaFinalizacion) {this.horaEstimadaFinalizacion = horaEstimadaFinalizacion;}
-
-    public double getTotal() {return total;}
-
-    public void setTotal(double total) {this.total = total;}
-
-    public double getTotalCosto() {return totalCosto;}
-
-    public void setTotalCosto(double totalCosto) {this.totalCosto = totalCosto;}
-
-    public Estado getEstado() {return estado;}
-
-    public void setEstado(Estado estado) {this.estado = estado;}
-
-    public TipoEnvio getTipoEnvio() {return tipoEnvio;}
-
-    public void setTipoEnvio(TipoEnvio tipoEnvio) {this.tipoEnvio = tipoEnvio;}
-
-    public FormaPago getFormaPago() {return formaPago;}
-
-    public void setFormaPago(FormaPago formaPago) {this.formaPago = formaPago;}
-
-    public LocalDate getFechaPedido() {return fechaPedido;}
-
-    public void setFechaPedido(LocalDate fechaPedido) {this.fechaPedido = fechaPedido;}
-
-    public Factura getFactura() {return factura;}
-
-    public void setFactura(Factura factura) {this.factura = factura;}
-
-    public List<DetallePedido> getDetallePedido() {return detallePedido;}
-
-    public void setDetallePedido(List<DetallePedido> detallePedido) {this.detallePedido = detallePedido;}
-
-    public Cliente getCliente() {return cliente;}
-
-    public void setCliente(Cliente cliente) {this.cliente = cliente;}
 }

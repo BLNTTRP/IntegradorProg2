@@ -1,43 +1,25 @@
 package Entities;
 
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import java.util.HashSet;
+//import java.util.List;
+import java.util.Set;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 
 public class Articulo extends Base{
     protected String denominacion;
     protected Double precioVenta;
-    private List<Promocion> promociones = new ArrayList<>();
-    protected List<Imagen> imagenes = new ArrayList<>();
-    private UnidadMedida unidadMedida;
-    private Categoria categoria;
 
-    public Articulo(String denominacion, Double precioVenta) {
-        this.denominacion = denominacion;
-        this.precioVenta = precioVenta;
+    private Set<Promocion> promociones = new HashSet<>();
+    private Set<Imagen> imagenes = new HashSet<>();
+    private Set<DetallePedido> detallePedidos = new HashSet<>();
 
-    }
-
-    public String getDenominacion() {return denominacion;}
-
-    public void setDenominacion(String denominacion) {this.denominacion = denominacion;}
-
-    public Double getPrecioVenta() {return precioVenta;}
-
-    public void setPrecioVenta(Double precioVenta) {this.precioVenta = precioVenta;}
-
-    public List<Promocion> getPromociones() {return promociones;}
-
-    public void setPromociones(List<Promocion> promociones) {this.promociones = promociones;}
-
-    public List<Imagen> getImagenes() {return imagenes;}
-
-    public void setImagenes(List<Imagen> imagenes) {this.imagenes = imagenes;}
-
-    public UnidadMedida getUnidadMedida() {return unidadMedida;}
-
-    public void setUnidadMedida(UnidadMedida unidadMedida) {this.unidadMedida = unidadMedida;}
-
-    public Categoria getCategoria() {return categoria;}
-
-    public void setCategoria(Categoria categoria) {this.categoria = categoria;}
 }
