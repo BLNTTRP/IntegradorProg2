@@ -14,7 +14,10 @@ import java.util.Set;
 
 public class Provincia extends Base {
     private String nombre;
-
+    private Pais pais;
     private Set<Localidad> localidades = new HashSet<>();
 
+    public Provincia(String mendoza, Pais argentina) {
+        super();
+    }
 }

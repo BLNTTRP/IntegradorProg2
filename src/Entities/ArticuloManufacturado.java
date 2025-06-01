@@ -21,4 +21,6 @@ public class ArticuloManufacturado extends Articulo {
 
     private Set<ArticuloManufacturadoDetalle> detalles = new HashSet<>();
 
+    public ArticuloManufacturado(String hamburguesaCompleta, double v, String s, int i, String s1) {
+    }
 }

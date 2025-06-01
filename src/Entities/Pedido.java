@@ -31,4 +31,10 @@ public class Pedido extends Base {
     private Factura factura;
     private Set<DetallePedido> detallePedido = new HashSet<>();
 
+    public Pedido(LocalDate now, Cliente cliente, FormaPago formaPago, TipoEnvio tipoEnvio) {
+        super();
+    }
+
+    public void agregarDetalle(DetallePedido detalle) {
+    }
 }

@@ -14,4 +14,7 @@ public class DetallePedido extends Base{
     private int cantidad;
     private double subTotal;
 
+    public DetallePedido(int cantidad, ArticuloManufacturado hamburguesa) {
+        super();
+    }
 }

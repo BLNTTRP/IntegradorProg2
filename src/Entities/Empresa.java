@@ -22,4 +22,11 @@ public class Empresa extends Base {
 
     private Set<Sucursal> sucursales = new HashSet<>();
 
+    public Empresa(String s, String buenSaborSociedadAnónima, long l) {
+        super();
+    }
+
+    public String getCuil() {
+        return "";
+    }
 }

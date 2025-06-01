@@ -23,4 +23,8 @@ public class Domicilio extends Base {
     private Set<Cliente> clientes = new HashSet<>();
     private Set<Pedido> pedidos = new HashSet<>();
 
+
+    public Domicilio(String sanMartín, int i, int i1, Localidad godoyCruz) {
+        super();
+    }
 }

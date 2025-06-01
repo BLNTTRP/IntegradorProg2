@@ -14,7 +14,7 @@ import java.util.Set;
 @Getter
 @Setter
 
-public class Articulo extends Base{
+public abstract class Articulo extends Base{
     protected String denominacion;
     protected Double precioVenta;
 

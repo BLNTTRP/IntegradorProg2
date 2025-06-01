@@ -23,4 +23,7 @@ public class Factura extends Base{
 
     private Pedido pedido;
 
+    public Factura(LocalDate now, FormaPago formaPago, double total) {
+        super();
+    }
 }

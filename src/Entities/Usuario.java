@@ -13,7 +13,11 @@ import lombok.Setter;
 public class Usuario extends Base {
     private String authOId;
     private String username;
+
     private Cliente cliente;
-    
+
+    public Usuario(String s, String juanperez) {
+        super();
+    }
 }
 

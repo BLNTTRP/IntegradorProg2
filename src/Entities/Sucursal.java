@@ -23,4 +23,8 @@ public class Sucursal extends Base {
     private Domicilio domicilio;
     private Set<Categoria> categorias = new HashSet<>();
     private Set<Promocion> promociones = new HashSet<>();
+
+    public Sucursal(String sucursalCentro, LocalTime of, LocalTime of1, Domicilio domicilioSucursal) {
+        super();
+    }
 }

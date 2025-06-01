@@ -1,5 +1,5 @@
 package Entities;
 
-public class Base {
+public abstract class Base {
 
 }
