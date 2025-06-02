@@ -23,4 +23,11 @@ public class ArticuloManufacturado extends Articulo {
 
     public ArticuloManufacturado(String hamburguesaCompleta, double v, String s, int i, String s1) {
     }
+
+    public void setUnidadMedida(UnidadMedida unidad) {
+    }
+
+    public void setCategoria(Categoria categoria) {
+
+    }
 }

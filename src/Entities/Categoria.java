@@ -19,4 +19,7 @@ public class Categoria extends Base{
 
     private Set<Sucursal> sucursales = new HashSet<>();
 
+    public Categoria(String comidasRápidas) {
+        super();
+    }
 }

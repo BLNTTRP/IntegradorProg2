@@ -13,5 +13,8 @@ import lombok.Setter;
 public class ArticuloManufacturadoDetalle extends Base {
     private int cantidad;
 
+    public ArticuloManufacturadoDetalle(ArticuloInsumo pan, int i) {
+        super();
+    }
 }
 

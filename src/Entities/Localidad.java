@@ -18,7 +18,7 @@ public class Localidad extends Base {
     private Provincia provincia;
     private Set<Domicilio> domicilios = new HashSet<>();
 
-    public Localidad(String godoyCruz, Provincia mendoza) {
+    public Localidad(String Albuquerque, Provincia Nuevo_Mexico) {
         super();
     }
 }

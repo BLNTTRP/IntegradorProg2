@@ -18,7 +18,7 @@ public class Pais extends Base {
     private Set<Provincia> provincias = new HashSet<>();
 
 
-    public Pais(String argentina) {
+    public Pais(String Estados_Unidos) {
         super();
     }
 }

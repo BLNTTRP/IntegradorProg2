@@ -30,5 +30,9 @@ public class Promocion extends Base {
     private Set<Imagen> imagenes = new HashSet<>();
     private Set<Articulo> articulos = new HashSet<>();
 
+    public Promocion(String s, LocalDate now, LocalDate localDate, LocalTime of, LocalTime of1, String s1, double v,
+                     TipoPromocion tipoPromocion) {
+        super();
+    }
 }
 

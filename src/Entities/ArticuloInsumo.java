@@ -19,5 +19,8 @@ public class ArticuloInsumo extends Articulo{
     private Boolean esParaElaborar;
 
     private Set<ArticuloManufacturadoDetalle> articuloManufacturadoDetalles = new HashSet<>();
- }
+
+    public ArticuloInsumo(String pan, int i, int i1, int i2, int i3, boolean b) {
+    }
+}
 

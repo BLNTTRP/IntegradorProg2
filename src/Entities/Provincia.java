@@ -17,7 +17,7 @@ public class Provincia extends Base {
     private Pais pais;
     private Set<Localidad> localidades = new HashSet<>();
 
-    public Provincia(String mendoza, Pais argentina) {
+    public Provincia(String Nuevo_Mexico, Pais Estados_Unidos) {
         super();
     }
 }
