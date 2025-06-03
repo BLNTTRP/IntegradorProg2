@@ -30,7 +30,7 @@ public class Main {
             LocalDate.of(1995, 5, 20),
             usuarioCliente
         );
-
+ 
         System.out.println("Cliente: " + cliente.getNombre() + " " + cliente.getApellido());
         System.out.println("Usuario: " + cliente.getUsuario().getUsername());
 
