@@ -9,7 +9,7 @@ public class Main {
         Provincia Nuevo_Mexico = new Provincia("Nuevo Mexico", Estados_Unidos);
         Localidad Albuquerque = new Localidad("Albuquerque", Nuevo_Mexico);
 
-        Domicilio domicilioSucursal = new Domicilio("San Martín", 123, 5501, Albuquerque);
+        Domicilio domicilioSucursal = new Domicilio("Negra Arroyo Lane", 123, 5501, Albuquerque);
 
         Sucursal sucursal = new Sucursal("Sucursal Centro", LocalTime.of(9, 0), LocalTime.of(20, 0), domicilioSucursal);
 
@@ -20,13 +20,13 @@ public class Main {
         System.out.println("Empresa: " + empresa.getNombre() + " - CUIL: " + empresa.getCuil());
         System.out.println("Sucursal: " + sucursal.getNombre() + " - Dirección: " + domicilioSucursal.getCalle() + " " + domicilioSucursal.getNumero());
 
-        Usuario usuarioCliente = new Usuario("auth0|abc123", "juanperez");
+        Usuario usuarioCliente = new Usuario("auth0|abc123", "Walter White");
 
         Cliente cliente = new Cliente(
-            "Juan",
-            "Pérez",
+            "Walter",
+            "White",
             "2614567890",
-            "juan.perez@email.com",
+            "Walter.White@email.com",
             LocalDate.of(1995, 5, 20),
             usuarioCliente
         );

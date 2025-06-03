@@ -16,7 +16,7 @@ public class Usuario extends Base {
 
     private Cliente cliente;
 
-    public Usuario(String s, String juanperez) {
+    public Usuario(String s, String WalterWhite) {
         super();
     }
 }

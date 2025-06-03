@@ -24,7 +24,7 @@ public class Domicilio extends Base {
     private Set<Pedido> pedidos = new HashSet<>();
 
 
-    public Domicilio(String sanMartín, int i, int i1, Localidad godoyCruz) {
+    public Domicilio(String NegraArroyoLane, int i, int i1, Localidad Albuqerque) {
         super();
     }
 }

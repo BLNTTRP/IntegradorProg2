@@ -28,7 +28,7 @@ public class Cliente extends Base {
     private Set<Domicilio> domicilios = new HashSet<>();
     private Set<Pedido> pedidos = new HashSet<>();
 
-    public Cliente(String juan, String pérez, String number, String mail, LocalDate of, Usuario usuarioCliente) {
+    public Cliente(String Walter, String White, String number, String mail, LocalDate of, Usuario usuarioCliente) {
         super();
     }
 }
