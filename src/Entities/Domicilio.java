@@ -9,8 +9,6 @@ import lombok.Setter;
 import java.util.HashSet;
 import java.util.Set;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 
@@ -24,7 +22,10 @@ public class Domicilio extends Base {
     private Set<Pedido> pedidos = new HashSet<>();
 
 
-    public Domicilio(String NegraArroyoLane, int i, int i1, Localidad Albuqerque) {
-        super();
+    public Domicilio(String calle, int numero, int cp, Localidad Albuqerque) {
+       this.calle = calle;
+       this.numero = numero;
+       this.cp = cp;
+       this.localidad = localidad;
     }
 }

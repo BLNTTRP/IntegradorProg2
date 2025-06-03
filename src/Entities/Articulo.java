@@ -9,8 +9,6 @@ import java.util.HashSet;
 //import java.util.List;
 import java.util.Set;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 
@@ -22,4 +20,8 @@ public abstract class Articulo extends Base{
     private Set<Imagen> imagenes = new HashSet<>();
     private Set<DetallePedido> detallePedidos = new HashSet<>();
 
+    public Articulo(String denominacion, Double precioVenta) {
+        this.denominacion = denominacion;
+        this.precioVenta = precioVenta;
+    }
 }

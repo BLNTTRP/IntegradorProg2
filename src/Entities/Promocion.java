@@ -11,8 +11,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 
@@ -30,9 +28,18 @@ public class Promocion extends Base {
     private Set<Imagen> imagenes = new HashSet<>();
     private Set<Articulo> articulos = new HashSet<>();
 
-    public Promocion(String s, LocalDate now, LocalDate localDate, LocalTime of, LocalTime of1, String s1, double v,
+    public Promocion(String denominacion, LocalDate fechaDesde, LocalDate fechaHasta,
+                     LocalTime horaDesde, LocalTime horaHasta,
+                     String descripcionDescuento, double precioPromocional,
                      TipoPromocion tipoPromocion) {
-        super();
+        this.denominacion = denominacion;
+        this.fechaDesde = fechaDesde;
+        this.fechaHasta = fechaHasta;
+        this.horaDesde = horaDesde;
+        this.horaHasta = horaHasta;
+        this.descripcionDescuento = descripcionDescuento;
+        this.precioPromocional = precioPromocional;
+        this.tipoPromocion = tipoPromocion;
     }
 }
 

@@ -5,16 +5,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 
 public class DetallePedido extends Base{
     private int cantidad;
     private double subTotal;
+    private Articulo articulo;
 
-    public DetallePedido(int cantidad, ArticuloManufacturado hamburguesa) {
-        super();
+    public DetallePedido(int cantidad, Articulo articulo) {
+        this.cantidad = cantidad;
+        this.articulo = articulo;
+        this.subTotal = cantidad * articulo.getPrecioVenta();
     }
+
+
 }

@@ -13,11 +13,11 @@ public class Main {
 
         Sucursal sucursal = new Sucursal("Sucursal Centro", LocalTime.of(9, 0), LocalTime.of(20, 0), domicilioSucursal);
 
-        Empresa empresa = new Empresa("Buen Sabor S.A.", "Buen Sabor Sociedad Anónima", 30567891234L);
+        Empresa empresa = new Empresa("Buen Sabor S.A.", "Buen Sabor Sociedad Anónima", (int) 30567891234L);
         empresa.getSucursales().add(sucursal);
 
 
-        System.out.println("Empresa: " + empresa.getNombre() + " - CUIL: " + empresa.getCuil());
+        System.out.println("Empresa: " + empresa.getNombre() + " - CUIL: " + empresa.getCuit());
         System.out.println("Sucursal: " + sucursal.getNombre() + " - Dirección: " + domicilioSucursal.getCalle() + " " + domicilioSucursal.getNumero());
 
         Usuario usuarioCliente = new Usuario("auth0|abc123", "Walter White");
@@ -35,14 +35,18 @@ public class Main {
         System.out.println("Usuario: " + cliente.getUsuario().getUsername());
 
         ArticuloManufacturado hamburguesa = new ArticuloManufacturado(
-            "Hamburguesa Completa", 2500.0,
-            "Pan, carne, lechuga, tomate y cheddar", 15,
-            "Cocinar la carne y armar la hamburguesa"
+                "Hamburguesa Completa", 2500.0,
+                "Pan, carne, lechuga, tomate y cheddar",
+                15,
+                "Cocinar la carne y armar la hamburguesa"
         );
 
-        DetallePedido detalle = new DetallePedido(2, hamburguesa); // 2 unidades
 
-        Pedido pedido = new Pedido(LocalDate.now(), cliente, FormaPago.MERCADOPAGO, TipoEnvio.DELIVERY);
+        DetallePedido detalle = new DetallePedido(2, hamburguesa);
+
+        Pedido pedido = new Pedido(LocalDate.now(), FormaPago.MERCADOPAGO, TipoEnvio.DELIVERY);
+        pedido.agregarDetalle(detalle);
+
         pedido.agregarDetalle(detalle);
 
         Factura factura = new Factura(LocalDate.now(), FormaPago.MERCADOPAGO, pedido.getTotal());
@@ -59,15 +63,13 @@ public class Main {
         Imagen imagen = new Imagen("hamburguesa.png");
 
 
-        ArticuloInsumo pan = new ArticuloInsumo("Pan", 200, 100, 100, 200, false);
-        ArticuloInsumo carne = new ArticuloInsumo("Carne", 500, 300, 100, 150, true);
-        ArticuloInsumo cheddar = new ArticuloInsumo("Cheddar", 300, 150, 100, 150, false);
-
+        ArticuloInsumo pan = new ArticuloInsumo("Pan", 200.0, 150.0, 100, 200, false);
+        ArticuloInsumo carne = new ArticuloInsumo("Carne", 500.0, 450.0, 100, 150, true);
+        ArticuloInsumo cheddar = new ArticuloInsumo("Cheddar", 300.0, 134.0, 100, 150, false);
 
         ArticuloManufacturadoDetalle detPan = new ArticuloManufacturadoDetalle(pan, 1);
         ArticuloManufacturadoDetalle detCarne = new ArticuloManufacturadoDetalle(carne, 1);
         ArticuloManufacturadoDetalle detCheddar = new ArticuloManufacturadoDetalle(cheddar, 1);
-
 
         hamburguesa.getDetalles().add(detPan);
         hamburguesa.getDetalles().add(detCarne);

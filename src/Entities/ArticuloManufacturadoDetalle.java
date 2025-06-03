@@ -5,16 +5,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 
 public class ArticuloManufacturadoDetalle extends Base {
+    private ArticuloInsumo insumo;
     private int cantidad;
 
-    public ArticuloManufacturadoDetalle(ArticuloInsumo pan, int i) {
-        super();
+    public ArticuloManufacturadoDetalle(ArticuloInsumo insumo, int cantidad) {
+        this.insumo = insumo;
+        this.cantidad = cantidad;
     }
 }
 

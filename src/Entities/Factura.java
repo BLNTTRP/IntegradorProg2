@@ -23,7 +23,14 @@ public class Factura extends Base{
 
     private Pedido pedido;
 
-    public Factura(LocalDate now, FormaPago formaPago, double total) {
-        super();
+    public Factura(LocalDate fechaFacturacion, FormaPago formaPago, double totalVenta) {
+        this.fechaFacturacion = fechaFacturacion;
+        this.formaPago = formaPago;
+        this.totalVenta = totalVenta;
+        this.mpPaymentId = 1234;
+        this.mpMerchantOrderId = 5678;
+        this.mpPreferenceId = "MP-XYZ-001";
+        this.mpPaymentType = "credit_card";
     }
+
 }

@@ -9,8 +9,6 @@ import java.util.HashSet;
 //import java.util.List;
 import java.util.Set;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 
@@ -19,7 +17,7 @@ public class Categoria extends Base{
 
     private Set<Sucursal> sucursales = new HashSet<>();
 
-    public Categoria(String comidasRápidas) {
-        super();
+    public Categoria(String denominacion) {
+        this.denominacion = denominacion;
     }
 }

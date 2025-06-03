@@ -5,8 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 
@@ -16,8 +14,9 @@ public class Usuario extends Base {
 
     private Cliente cliente;
 
-    public Usuario(String s, String WalterWhite) {
-        super();
+    public Usuario(String authOId, String username) {
+        this.authOId = authOId;
+        this.username = username;
     }
 }
 

@@ -31,10 +31,16 @@ public class Pedido extends Base {
     private Factura factura;
     private Set<DetallePedido> detallePedido = new HashSet<>();
 
-    public Pedido(LocalDate now, Cliente cliente, FormaPago formaPago, TipoEnvio tipoEnvio) {
-        super();
+    public Pedido(LocalDate fechaPedido, FormaPago formaPago, TipoEnvio tipoEnvio) {
+        this.fechaPedido = fechaPedido;
+        this.formaPago = formaPago;
+        this.tipoEnvio = tipoEnvio;
+        this.estado = Estado.PENDIENTE;
+        this.horaEstimadaFinalizacion = LocalTime.now().plusMinutes(30); // simulación
     }
 
     public void agregarDetalle(DetallePedido detalle) {
+        this.detallePedido.add(detalle);
+        total += detalle.getSubTotal();
     }
 }

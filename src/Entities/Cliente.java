@@ -28,7 +28,13 @@ public class Cliente extends Base {
     private Set<Domicilio> domicilios = new HashSet<>();
     private Set<Pedido> pedidos = new HashSet<>();
 
-    public Cliente(String Walter, String White, String number, String mail, LocalDate of, Usuario usuarioCliente) {
-        super();
+    public Cliente(String nombre, String apellido, String telefono, String email, LocalDate fechaNacimiento, Usuario usuario) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.email = email;
+        this.fechaNacimiento = fechaNacimiento;
+        this.usuario = usuario;
     }
+
 }

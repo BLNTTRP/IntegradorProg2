@@ -10,8 +10,6 @@ import java.util.HashSet;
 //import java.util.List;
 import java.util.Set;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 
@@ -22,11 +20,10 @@ public class Empresa extends Base {
 
     private Set<Sucursal> sucursales = new HashSet<>();
 
-    public Empresa(String s, String buenSaborSociedadAnónima, long l) {
-        super();
+    public Empresa(String nombre, String razonSocial, int cuit ) {
+        this.nombre = nombre;
+        this.razonSocial = razonSocial;
+        this.cuit = cuit;
     }
 
-    public String getCuil() {
-        return "";
-    }
 }

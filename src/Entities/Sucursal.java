@@ -10,8 +10,6 @@ import java.util.HashSet;
 //import java.util.List;
 import java.util.Set;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 
@@ -24,7 +22,10 @@ public class Sucursal extends Base {
     private Set<Categoria> categorias = new HashSet<>();
     private Set<Promocion> promociones = new HashSet<>();
 
-    public Sucursal(String sucursalCentro, LocalTime of, LocalTime of1, Domicilio domicilioSucursal) {
-        super();
+    public Sucursal(String nombre, LocalTime horarioApertura, LocalTime horarioCierre, Domicilio domicilio) {
+        this.nombre = nombre;
+        this.horarioApertura = horarioApertura;
+        this.horarioCierre = horarioCierre;
+        this.domicilio = domicilio;
     }
 }

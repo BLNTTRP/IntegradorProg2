@@ -7,8 +7,6 @@ import lombok.Setter;
 import java.util.HashSet;
 import java.util.Set;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 
@@ -20,7 +18,13 @@ public class ArticuloInsumo extends Articulo{
 
     private Set<ArticuloManufacturadoDetalle> articuloManufacturadoDetalles = new HashSet<>();
 
-    public ArticuloInsumo(String pan, int i, int i1, int i2, int i3, boolean b) {
+    public ArticuloInsumo(String denominacion, Double precioVenta, Double precioCompra, int stockActual, int stockMaximo, Boolean esParaElaborar) {
+        super(denominacion, precioVenta);
+        this.precioCompra = precioCompra;
+        this.stockActual = stockActual;
+        this.stockMaximo = stockMaximo;
+        this.esParaElaborar = esParaElaborar;
     }
+
 }
 
