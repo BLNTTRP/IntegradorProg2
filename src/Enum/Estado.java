@@ -5,5 +5,5 @@ public enum Estado {
     PENDIENTE,
     CANCELADO,
     RECHAZADO,
-    ENTREGADO,
+    ENTREGADO
 }

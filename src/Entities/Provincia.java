@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.util.HashSet;
-import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,10 +12,6 @@ import java.util.Set;
 
 public class Provincia extends Base {
     private String nombre;
-    private Pais pais;
-    private Set<Localidad> localidades = new HashSet<>();
 
-    public Provincia(String Nuevo_Mexico, Pais Estados_Unidos) {
-        super();
-    }
+    private Pais pais = new Pais();
 }

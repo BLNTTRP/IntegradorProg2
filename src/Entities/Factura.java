@@ -12,18 +12,16 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Factura extends Base{
+public class Factura extends Base {
     private LocalDate fechaFacturacion;
-    private int mpPaymentId;
-    private int mpMerchantOrderId;
+    private Integer mpPaymentId;
+    private Integer mpMerchantOrderId;
     private String mpPreferenceId;
     private String mpPaymentType;
     private FormaPago formaPago;
-    private double totalVenta;
+    private Double totalVenta;
 
-    private Pedido pedido;
-
-    public Factura(LocalDate fechaFacturacion, FormaPago formaPago, double totalVenta) {
+    public Factura(LocalDate fechaFacturacion, FormaPago formaPago, Double totalVenta) {
         this.fechaFacturacion = fechaFacturacion;
         this.formaPago = formaPago;
         this.totalVenta = totalVenta;
@@ -32,5 +30,4 @@ public class Factura extends Base{
         this.mpPreferenceId = "MP-XYZ-001";
         this.mpPaymentType = "credit_card";
     }
-
 }

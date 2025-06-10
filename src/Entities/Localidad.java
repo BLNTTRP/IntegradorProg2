@@ -5,9 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.HashSet;
-import java.util.Set;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -15,10 +12,6 @@ import java.util.Set;
 
 public class Localidad extends Base {
     private String nombre;
-    private Provincia provincia;
-    private Set<Domicilio> domicilios = new HashSet<>();
 
-    public Localidad(String Albuquerque, Provincia Nuevo_Mexico) {
-        super();
-    }
+    private Provincia provincia = new Provincia();
 }

@@ -2,9 +2,7 @@ package Entities;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-//import java.util.ArrayList;
 import java.util.HashSet;
-//import java.util.List;
 import java.util.Set;
 import Enum.TipoEnvio;
 import Enum.Estado;
@@ -22,14 +20,16 @@ import lombok.Setter;
 public class Pedido extends Base {
     private Estado estado;
     private LocalTime horaEstimadaFinalizacion;
-    private double total;
-    private double totalCosto;
+    private Double total;
+    private Double totalCosto;
     private TipoEnvio tipoEnvio;
     private FormaPago formaPago;
     private LocalDate fechaPedido;
 
-    private Factura factura;
+    private Factura factura = new Factura();
     private Set<DetallePedido> detallePedido = new HashSet<>();
+    private Sucursal sucursal = new Sucursal();
+    private Domicilio domicilio = new Domicilio();
 
     public Pedido(LocalDate fechaPedido, FormaPago formaPago, TipoEnvio tipoEnvio) {
         this.fechaPedido = fechaPedido;

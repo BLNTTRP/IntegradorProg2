@@ -1,5 +1,11 @@
 package Entities;
 
-public abstract class Base {
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+
+public abstract class Base {
+    private Integer id;
 }

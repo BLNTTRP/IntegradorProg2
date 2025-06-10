@@ -7,14 +7,12 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 
 public class ArticuloManufacturadoDetalle extends Base {
-    private ArticuloInsumo insumo;
-    private int cantidad;
+    private Integer cantidad;
 
-    public ArticuloManufacturadoDetalle(ArticuloInsumo insumo, int cantidad) {
-        this.insumo = insumo;
-        this.cantidad = cantidad;
-    }
+    private ArticuloInsumo insumo = new ArticuloInsumo();
 }
 

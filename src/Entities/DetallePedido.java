@@ -7,17 +7,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 
-public class DetallePedido extends Base{
-    private int cantidad;
-    private double subTotal;
+public class DetallePedido extends Base {
+    private Integer cantidad;
+    private Double subTotal;
     private Articulo articulo;
-
-    public DetallePedido(int cantidad, Articulo articulo) {
-        this.cantidad = cantidad;
-        this.articulo = articulo;
-        this.subTotal = cantidad * articulo.getPrecioVenta();
-    }
-
-
 }

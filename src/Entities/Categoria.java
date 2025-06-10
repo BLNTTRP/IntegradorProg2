@@ -1,23 +1,21 @@
 package Entities;
 
-//import java.util.ArrayList;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.util.HashSet;
-//import java.util.List;
 import java.util.Set;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 
-public class Categoria extends Base{
+public class Categoria extends Base {
     private String denominacion;
 
-    private Set<Sucursal> sucursales = new HashSet<>();
-
-    public Categoria(String denominacion) {
-        this.denominacion = denominacion;
-    }
+    private Categoria categoriaPadre;
+    private Set<Categoria> subcategorias = new HashSet<>();
+    private Set<Articulo> articulos = new HashSet<>();
 }

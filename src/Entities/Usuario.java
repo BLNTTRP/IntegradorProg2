@@ -7,16 +7,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 
 public class Usuario extends Base {
     private String authOId;
     private String username;
-
-    private Cliente cliente;
-
-    public Usuario(String authOId, String username) {
-        this.authOId = authOId;
-        this.username = username;
-    }
 }
 
